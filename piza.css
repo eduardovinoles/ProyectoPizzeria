@@ -1,0 +1,374 @@
+body {
+  background-color : white;
+  /*background: url(./img/food.png);*/
+  background-attachment: fixed;
+}
+/*navbar*/
+.colored {
+  background: rgba(6,6,6, 0.90);
+  /*position: fixed;*/
+  transition: .75s;
+}
+.transparent { 
+  background: rgba(6,6,6, 0.35);
+  transition:  .75s;
+
+}
+footer {
+  background-color: rgba(6, 6, 6, 0.986);
+
+}
+/*cards*/
+.box-shadow {
+    -webkit-box-shadow: 0 1px 1px rgba(72,78,85,.6);
+    box-shadow: 0 1px 1px rgba(72,78,85,.6);
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.box-shadow:hover {
+    -webkit-box-shadow: 0 20px 40px rgba(72,78,85,.6);
+    box-shadow: 0 20px 40px rgba(72,78,85,.6);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px);
+}
+/* button 6 */
+button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-6 {
+  background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+/* button 12 */
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+/*text logo*/
+.oro {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gold {
+  color: #cfc09f;
+  font-family: 'Press Start 2P';
+  position: relative;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 400;
+  transform: scale(1);
+  text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+.gold:before {
+  content: attr(data-heading);
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+body, html {
+  height: 100%;
+}
+/*paralax*/
+.parallax {
+  background-image: url("./img/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
+  position: relative;
+  /* Full height */
+  height: 50%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+.container2 .content {
+  position: absolute; /* Position the background text */
+  bottom: 20%; /* At the bottom. Use top:0 to append it to the top */
+  text-align: right;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.0); /* Black background with 0.5 opacity */
+  color: rgba(0, 0, 0, 0); /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+  transition: 1.5s;
+}
+.container2 .content > h1 {
+  font-family: Iceland;
+  font-size: 55px;
+  font-weight: 900;
+  text-shadow: 1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+
+
+}
+.container2:hover .content {
+  transform: translate(-1000px);
+  color:yellow;
+  background: rgba(6,6,6, 0.35);
+  sha
+}
+/*glow*/
+.glow > p {
+  text-align: center;
+  font-size: 7em;
+  margin: 20px 0 20px 0;
+}
+
+.glow > a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.glow > p:nth-child(1) a {
+  color: #fff;
+  font-family: Monoton;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.glow > p:nth-child(1) a:hover {
+  color: #ff1177;
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+}
+.glow > p a:hover {
+  color: #ffffff;
+}
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
+      0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
+  }
+}
+/*REEEEEEEEEEESPONSIVE*/
+
+@media (max-width: 650px) {
+  #glow {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
+}
+.vanishTrigger:hover > div > img {
+  transform: scale(1.2);
+  transition: all 0.5s;
+
+}
+
+  .play{
+    display:block;
+    margin:auto;
+    background:url("http://www.lexus.com/lexus-share/v2/img/play-button.svg");
+    background-size:80px 80px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    width:100px;
+    height:100px;
+    border:9px dashed rgba(104,172,174,1);
+    border-radius:80%;
+    box-sizing:border-box;
+    transition:0.125s ease;
+    position: absolute;
+    z-index: 200;
+    left: 200px;
+    top: 2300px;
+    }
+  
+  .play:hover{background-size:180px 180px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    border:20px solid rgba(87,139,141,0.5);
+  }
+  .carousel-inner {
+    margin-top: 5px;
+    height: 900px;
+  }
+  
