@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Iceland">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina Outline">
+
   <link rel="stylesheet" href="piza.css" />
   <!--<link rel="stylesheet" href="../magic-master/dist/magic.min.css">-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css"
@@ -26,72 +29,77 @@
     <!--Navbar-->
     <div class="row sticky-md-top">
       <nav id="myNav" class="navbar navbar-expand-md ">
-        <div class="col-xs-6 col-md-2 col-lg-4">
-          <img id="magic" src="./img/logo.png" alt="" width="120" class="d-inline-block align-text-top">
+        <div class="col-xs-6 col-md-2 col-lg-3">
+          <a href="#section1"><img id="magic" src="./img/logo.png" alt="" width="120"
+              class="d-inline-block align-text-top"></a>
         </div>
-        <div clas="col-xs-6 col-md-3 col-lg-3 d-flex oro">
+        <div clas="col-xs-6 col-md-3 col-lg-4 d-flex oro">
           <h1 class="gold" data-heading="Flor de Pizza">Flor de Pizza</h1>
-
-
         </div>
-        <div class="col-4">
-
+        <div class="col-2 align-self-end">
+          <div id="glow" class="glow">
+            <p><a href="#menu">
+                Menu
+              </a></p>
+          </div>
+        </div>
+        <div class="col-3 align-self-end">
+          <div id="glow" class="glow ">
+            <p><a>
+                Contact
+              </a></p>
+          </div>
         </div>
       </nav>
     </div>
     <!--Carousel-->
-    <div class="row">
+    <div id="section1" class="row">
       <div class="col-12">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="./img/slide-1-1920x753.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5><span>Pizza Perfecta </span></h5>
-                <p><span>Experimente el perfecto sabor de la pizza en Flor De Pizza, una de las mejores
-                    Pizzerias!</span></p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/slide-2-1920x753.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5><span>Ingredientes de Calidad</span></h5>
-                <p><span>Usamos ingredientes de primera calidad para que nuestros clientes disfruten de la mejor
-                    pizza.</span></p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/brickOven.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5><span>Ingredientes de Calidad</span></h5>
-                <p><span>Usamos ingredientes de primera calidad para que nuestros clientes disfruten de la mejor
-                    pizza.</span></p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/menu-3-370x278.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5><span>Ingredientes de Calidad</span></h5>
-                <p><span>Usamos ingredientes de primera calidad para que nuestros clientes disfruten de la mejor
-                    pizza.</span></p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/bvOlivePiza.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
-                <h5><span>Ingredientes de Calidad</span></h5>
-                <p><span>Usamos ingredientes de primera calidad para que nuestros clientes disfruten de la mejor
-                    pizza.</span></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- text slide -->
+    <div class="row sliderText">
+      <div class="col">
+        <div class="typing-slider">
+          <p>Flor de Pizza !</p>
+          <p>Disfrute de nuestras especialidades!</p>
+          <p>Ingredientes frescos y organicos.</p>
+          <p>Free Delivery!!</p>
+        </div>
+      </div>
+    </div>
 
     <!--Cards-->
-    <div class="row justify-content-center">
-
+    <div id="menu" class="row justify-content-center">
       <div class="col-lg-4 col-md-6">
         <div class="vanishTrigger card box-shadow mx-auto my-5" style="width: 18rem;">
           <div>
@@ -169,78 +177,123 @@
         </div>
       </div>
     </div>
-
-  </div>
-  <!--experimental-->
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <iframe id="ytplayer" type="text/html" width="640" height="360"
-          src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"></iframe>
+    <!--Paralax-->
+    <div class=" row container3 parallax2">
+      <div class="col-12">
+      </div>
+      <div class="col-6 content3">
+        <div>
+          <h1>BEER</h1>
+          <p>30% FREE <br /> Monday & Tuesday.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--Paralax-->
-  <div class=" row container2 parallax">
-    <div class="col-6">
-    </div>
-    <div class="col-6 content">
-      <div>
-        <h1>El mejor ambiente</h1>
-        <p>Flor de Pizza es el lugar <br /> de la mejor pizza y calidad en servicio.</p>
+    <!--experimental-->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pTS5wevgGKs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- picture trigger modal -->
-  <div class="row mt-4">
-    <div class="col">
-      <img src="./img/flour3.png" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;">
-    </div>
-  </div>
-  <!-- 3 picture row -->
-  <div class="row mt-4">
-    <div class="col-4">
-      <img src="./img/pizza-oven2-2537308_1920.png" style="width: 100%; height: 100%;">
-    </div>
-    <div class="col-4">
-      <img src="img/desert.jpg" style="width: 100%;">
-    </div>
-    <div class="col-4">
-      <img src="./img/dish.jpg" style="width: 100%;">
-    </div>
 
-  </div>
 
-  <!-- <div class="row">
-    <div class="col-4 align-self-end">
-    <div id="glow" class="glow">
-      <p><a>
-          OPEN
-        </a></p>
-    </div>
-  </div> 
-  </div>-->
-  <!--Footer-->
-  <div class="row fluid">
-    <footer class="footer  d-flex mt-auto py-3 text-center">
-      <div class="container">
-        <span class="text-light">Tarmac - Todos los derchos reservados</span>
+    <!-- picture trigger modal -->
+    <div class="row mt-4">
+      <div class="col">
+        <img src="./img/Screen Shot 2021-07-04 at 10.47.03 PM.jpg" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          style="width: 100%;">
       </div>
-    </footer>
-  </div>
-  </div>
+    </div>
+    <!-- 3 picture row -->
+    <div class="row mt-4">
+      <div class="col-4">
+        <img src="./img/pizza-oven2-2537308_1920.png" style="width: 100%; height: 100%;">
+      </div>
+      <div class="col-4">
+        <img src="img/desert.jpg" style="width: 100%;">
+      </div>
+      <div class="col-4">
+        <img src="./img/dish.jpg" style="width: 100%;">
+      </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"></script>
-  <script src="piza.js"></script>
+    </div>
+    <!-- costumers -->
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <div class="row mt-4">
+      <div class="col-md-12 col-lg-6">
+        <div class="destacado">
+          <div class="avery">
+            <div id="overlay"><img src="./img/pngwing.com copy.png"></div>
+          </div>
+
+          <div class="credit">
+            Edward Schmidt
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-6 destacado">
+        <div class="text">
+          T<i>HE</i> success of Edward Schmidt, possibly the most famous pizza chef in the world, is not measured by the number of his restaurants but the length of the lines outside them.
+          The restaurants may carry his name, or they may be called Flor de Pizza or Lievito Madre or Olio a Crudo, but they all belong to the man who may well be the most famous Neapolitan pizza chef in the world, Edward Schmidt. “Five points of sale in Naples alone, three in Milan, two in the United States (Minesota and in New York’s East Village neighborhood). A few months ago one opened in Rome, and one is coming to Genoa, while another is opening in Tokyo.” A common feature in all of them is lines, because everything Schmit touches turns into pizza, and then into gold. He may be easiest to find him in Minesota where he lives, but he zips from one city to another, keeping an eye on all his restaurants, appearing on TV shows and at food events.
+        </div>
+      </div>
+    </div>
+
+
+    <!--Paralax-->
+    <div class=" row mt-4 container2 parallax">
+      <div class="col-12">
+      </div>
+      <div class="col-6 content">
+        <div>
+          <h1>El mejor ambiente</h1>
+          <p>Flor de Pizza es el lugar <br /> de la mejor pizza y calidad en servicio.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--Footer-->
+    <div class="row fluid">
+      <footer class="footer  d-flex mt-auto py-3 text-center">
+        <div class="container">
+          <div class="row row-10 justify-content-between">
+            <div class="col-md-6"><span>Santa Rosa Canelones</span></div>
+            <div class="col-md-auto">
+              <!-- Rights-->
+              <p class="rights"><span>&copy;&nbsp;</span><span
+                  class="copyright-year"></span><span></span><span>.&nbsp;</span><span>All Rights
+                  Reserved.</span><span>
+                  Design&nbsp;by&nbsp;<div class="glow">
+                    <p><a id="designer" style="text-decoration: none; font-size: 3vh;"
+                        href="https://github.com/Edu3071/Edu3071.github.io">Eduardo Viñoles</a></p>
+                  </div></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="piza.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </div>
 </body>
 
 </html>

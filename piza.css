@@ -6,7 +6,6 @@ body {
 /*navbar*/
 .colored {
   background: rgba(6,6,6, 0.90);
-  /*position: fixed;*/
   transition: .75s;
 }
 .transparent { 
@@ -19,6 +18,9 @@ footer {
 
 }
 /*cards*/
+.card { 
+  height: 450px;
+}
 .box-shadow {
     -webkit-box-shadow: 0 1px 1px rgba(72,78,85,.6);
     box-shadow: 0 1px 1px rgba(72,78,85,.6);
@@ -138,6 +140,7 @@ button {
 .btn-6 span:hover:after {
   width: 100%;
 }
+
 /* button 12 */
 .btn-12{
   position: relative;
@@ -208,6 +211,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
 }
+
 /*text logo*/
 .oro {
   height: 100%;
@@ -221,7 +225,7 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   font-family: 'Press Start 2P';
   position: relative;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 4vh;
   margin: 0;
   font-weight: 400;
   transform: scale(1);
@@ -241,12 +245,13 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 body, html {
   height: 100%;
 }
+
 /*paralax*/
 .parallax {
   background-image: url("./img/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
   position: relative;
   /* Full height */
-  height: 50%;
+  height: 500px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -276,18 +281,159 @@ body, html {
   font-weight: 900;
   text-shadow: 1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
 
-
 }
 .container2:hover .content {
   transform: translate(-1000px);
   color:yellow;
   background: rgba(6,6,6, 0.35);
-  sha
+  
 }
+/* paralax3 */
+.parallax2 {
+  background-image: url("./img/splendid-table-beer-glasses.jpeg");
+  position: relative;
+  /* Full height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax2 {
+    background-attachment: scroll;
+  }
+}
+.container3 .content3 {
+  position: absolute; /* Position the background text */
+  bottom: 20%; /* At the bottom. Use top:0 to append it to the top */
+  text-align: left;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.0); /* Black background with 0.5 opacity */
+  color: rgba(0, 0, 0, 0); /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+  transition: 1.5s;
+}
+.container3 .content3 > h1 {
+  font-family: Iceland;
+  font-size: 55px;
+  font-weight: 900;
+  text-shadow: 1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+
+}
+.container3:hover .content3 {
+  transform: translate(1100px);
+  color:yellow;
+  background: rgba(6,6,6, 0.35);
+  
+}
+
+
+/* image menu scale */
+.vanishTrigger:hover > div > img {
+  transform: scale(1.2);
+  transition: all 0.5s;
+
+}
+
+ 
+  
+/* cardSocial */
+.sliderText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: #fc0;
+}
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
+ }
+  50% {
+    border-color: black;
+ }
+}
+@keyframes typing {
+  from {
+    width: 100%;
+ }
+  90%, to {
+    width: 0;
+ }
+}
+@keyframes slide {
+  33.3333333333% {
+    font-size: 3rem;
+    letter-spacing: 3px;
+ }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+ }
+}
+.typing-slider {
+  font-family: Consolas, monospace;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+.typing-slider p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  animation: slide 15s step-start infinite;
+}
+.typing-slider p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid black;
+  background-color: #fc0;
+  animation: typing 5s infinite, cursor 1s infinite;
+}
+.typing-slider p:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-slider p:nth-child(1)::after {
+  animation-delay: 0s;
+  animation-timing-function: steps(16), step-end;
+}
+.typing-slider p:nth-child(2) {
+  animation-delay: 5s;
+}
+.typing-slider p:nth-child(2)::after {
+  animation-delay: 5s;
+  animation-timing-function: steps(23), step-end;
+}
+.typing-slider p:nth-child(3) {
+  animation-delay: 10s;
+}
+.typing-slider p:nth-child(3)::after {
+  animation-delay: 10s;
+  animation-timing-function: steps(23), step-end;
+}
+.typing-slider p:nth-child(4) {
+  animation-delay: 15s;
+}
+.typing-slider p:nth-child(4)::after {
+  animation-delay: 15s;
+  animation-timing-function: steps(12), step-end;
+}
+
+
+/* nav menu */
 /*glow*/
 .glow > p {
-  text-align: center;
-  font-size: 7em;
+  text-align: right;
+  font-size: 5vh;
   margin: 20px 0 20px 0;
 }
 
@@ -299,32 +445,30 @@ body, html {
 }
 
 .glow > p:nth-child(1) a {
-  color: #fff;
-  font-family: Monoton;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
+  font-size: 4vh;
+  color: #228dff;
+  font-family: Pacifico/*Londrina Outline*/;
+  text-decoration: none;
 }
 
 .glow > p:nth-child(1) a:hover {
-  color: #ff1177;
-  -webkit-animation: none;
-  -moz-animation: none;
-  animation: none;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+  color: rgb(248, 7, 7);
 }
 .glow > p a:hover {
   color: #ffffff;
 }
 /*glow for webkit*/
-
 @-webkit-keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
-      0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+      0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
   }
   to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
-      0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+      0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
   }
 }
 /*REEEEEEEEEEESPONSIVE*/
@@ -337,38 +481,79 @@ body, html {
     font-size: 3.5em;
   }
 }
-.vanishTrigger:hover > div > img {
-  transform: scale(1.2);
-  transition: all 0.5s;
+ 
+/********** destacado************** */
+@import url(https://fonts.googleapis.com/css?family=Kanit:700,300);
 
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+
+
+
+.destacado a {
+  text-decoration: none;  
+  color: #446CB3;
+  margin: 0px 5px;
 }
 
-  .play{
-    display:block;
-    margin:auto;
-    background:url("http://www.lexus.com/lexus-share/v2/img/play-button.svg");
-    background-size:80px 80px;
-    background-position:50% 50%;
-    background-repeat:no-repeat;
-    width:100px;
-    height:100px;
-    border:9px dashed rgba(104,172,174,1);
-    border-radius:80%;
-    box-sizing:border-box;
-    transition:0.125s ease;
-    position: absolute;
-    z-index: 200;
-    left: 200px;
-    top: 2300px;
-    }
-  
-  .play:hover{background-size:180px 180px;
-    background-position:50% 50%;
-    background-repeat:no-repeat;
-    border:20px solid rgba(87,139,141,0.5);
-  }
-  .carousel-inner {
-    margin-top: 5px;
-    height: 900px;
-  }
-  
+.avery {
+  float: left;
+  height: 500px;
+  width: 355px;
+  margin: 0px 90px 50px 0px;
+  background-color: #f9cc33;
+}
+
+.avery img {
+  margin-left: 114px;
+  height: 350px;
+  /* width: 350px; */
+}
+
+.destacado{
+  max-width: 100%;
+}
+
+.credit {
+  position: absolute;
+  /* top: 0; */
+  left: 13;
+  font-family: Pacifico;  
+  font-size: 1.8em;
+  font-weight: 300;
+  color: #228dff;
+  line-height: 1.5em;
+  margin: 510px 50px;
+}
+
+#overlay {
+ position: absolute;
+ /* top: 0; */
+ left: 0;
+ margin: 150px 50px 10px 50px;
+ z-index: 3;
+}
+
+
+
+
+
+.destacado .text {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.4em;
+  text-align: justify;
+  line-height: 1.7em;
+  max-width: 1100px;
+  margin: 25px 10px 10px ;
+}
+
+.destacado .text::first-letter {
+  font-family: 'Kanit', sans-serif;
+  font-size: 6em;
+  font-weight: 700;
+  float: left;  
+  line-height: 80px; 
+  padding: 20px 10px 0px 0px;
+}
+
+
+
