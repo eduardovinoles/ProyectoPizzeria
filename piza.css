@@ -17,6 +17,11 @@ footer {
   background-color: rgba(6, 6, 6, 0.986);
 
 }
+/* carrousel */
+#carrouselWidth {
+  padding-right: 0px;
+  padding-left: 0px;
+}
 /*cards*/
 .card { 
   height: 450px;
