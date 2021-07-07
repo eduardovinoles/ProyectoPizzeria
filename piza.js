@@ -17,13 +17,7 @@ window.onscroll = () => {
     }
 }
 
-//cards//
-//function animateVanishOn(x) {
-// x.querySelector(".vanishTrigger").classList.add("magictime", "vanishIn")
-//}
-//function animateVanishOff(x) {
-// x.querySelector(".vanishTrigger").classList.remove("magictime", "vanishIn")
-//}
+
 window.onload = function () {
     let mail = document.getElementById("mail")
     let addres = document.getElementById("addres")

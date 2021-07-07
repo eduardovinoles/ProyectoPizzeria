@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press Start 2P">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Londrina Outline">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="piza.css" />
   <!--<link rel="stylesheet" href="../magic-master/dist/magic.min.css">-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magic/1.1.0/magic.min.css"
@@ -73,7 +75,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./img/menu-3-370x278.jpg" class="d-block w-100" alt="...">
+              <img src="./img/bigHamb.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
               </div>
             </div>
@@ -87,7 +89,7 @@
       </div>
     </div>
     <!-- text slide -->
-    <div class="row sliderText">
+    <!-- <div class="row sliderText">
       <div class="col">
         <div class="typing-slider">
           <p>Flor de Pizza !</p>
@@ -96,7 +98,7 @@
           <p>Free Delivery!!</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!--Cards-->
     <div id="menu" class="row justify-content-center">
@@ -108,7 +110,7 @@
           <div class="card-body">
             <h5 class="card-title">Champigniones</h5>
             <p class="card-text">Pizzeta con aceitunas negras, tomate y champigniones .</p>
-            <button class="custom-btn btn-12"><span>Comprar</span><span>$ 199</span></button>
+            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 199</span>
           </div>
         </div>
       </div>
@@ -121,7 +123,7 @@
           <div class="card-body">
             <h5 class="card-title">Hamburguesa</h5>
             <p class="card-text">Las mejores hamburguesas de la ciudad grandes y sabrosas.</p>
-            <button class="custom-btn btn-12"><span>Comprar</span><span>$ 189</span></button>
+            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 189</span>
           </div>
         </div>
       </div>
@@ -133,7 +135,7 @@
           <div class="card-body">
             <h5 class="card-title">Aceitunas negras</h5>
             <p class="card-text">Deliciosa pizzeta de aceitunas negras y tomate .</p>
-            <button class="custom-btn btn-12"><span>Comprar</span><span>$ 175</span></button>
+            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 175</span>
           </div>
         </div>
       </div>
@@ -147,7 +149,7 @@
           <div class="card-body">
             <h5 class="card-title">Papas fritas</h5>
             <p class="card-text">Ricas y crocantes hechas de papas seleccionadas .</p>
-            <button class="custom-btn btn-12"><span>Comprar</span><span>$ 165</span></button>
+            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 165</span>
           </div>
         </div>
       </div>
@@ -160,7 +162,7 @@
           <div class="card-body">
             <h5 class="card-title">Sandwiche caliente</h5>
             <p class="card-text">Pan fresco americano cortado fino y crujiente, el mas rico jamon y queso.</p>
-            <button class="custom-btn btn-12"><span>Comprar</span><span>$ 200</span></button>
+            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 200</span>
           </div>
         </div>
       </div>
@@ -172,7 +174,7 @@
           <div class="card-body">
             <h5 class="card-title">Muzzarella</h5>
             <p class="card-text">Pizza muzzarella por porcion , no se quede sin probar la mas rica de la region.</p>
-            <button class="custom-btn btn-12"><span>Comprar</span><span>$ 170</span></button>
+            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 170</span>
           </div>
         </div>
       </div>
@@ -268,7 +270,7 @@
       </div>
     </div>
     <!-- contact form -->
-    <div  id="section2" class="row">
+    <div id="section2" class="row">
       <div class="col-6 formSide">
 
       </div>
@@ -279,28 +281,30 @@
 
           <div class="inputs">
             <form name="contactForm" onsubmit="">
-            <label>EMAIL</label><div></div>
-            <input id="mail" class="form-label" type="email" placeholder="example@test.com" />
+              <label>EMAIL</label>
+              <div></div>
+              <input id="mail" class="form-label" type="email" placeholder="example@test.com" />
 
-            <label>ADDRESS</label>
-            <input id="addres" type="text" placeholder="street 123" />
+              <label>ADDRESS</label>
+              <input id="addres" type="text" placeholder="street 123" />
 
-            <label>NAME</label><p></p>
-            <input id="name" type="text" placeholder="Name" />
+              <label>NAME</label>
+              <p></p>
+              <input id="name" type="text" placeholder="Name" />
 
-            <label>SUBJECT</label>
-            <input id="subject" type="text" placeholder="Subject" />
+              <label>SUBJECT</label>
+              <input id="subject" type="text" placeholder="Subject" />
 
-            <label>PHONE</label>
-            <input id="phone" type="text" placeholder="Phone number" />
+              <label>PHONE</label>
+              <input id="phone" type="text" placeholder="Phone number" />
 
-            <label>MESSAGE</label>
-            <input id="message" type="textarea" placeholder="Any" />
+              <label>MESSAGE</label>
+              <input id="message" type="textarea" placeholder="Any" />
 
 
-            <button id="formSend" type="submit">SEND</button>
-            <div id="alert" style="color: red;"></div>
-          </form>
+              <button id="formSend" type="submit">SEND</button>
+              <div id="alert" style="color: red;"></div>
+            </form>
           </div>
         </div>
       </div>
@@ -310,33 +314,52 @@
     <div class="row fluid">
       <footer class="footer  d-flex mt-auto py-3 text-center">
         <div class="container">
-          <div class="row row-10 justify-content-between">
+          <div>
             <div class="col-md-6"><span>Santa Rosa Canelones</span></div>
-            <div class="col-md-auto">
-              <!-- Rights-->
-              <p class="rights"><span>&copy;&nbsp;</span><span
-                  class="copyright-year"></span><span></span><span>.&nbsp;</span><span>All Rights
-                  Reserved.</span><span>
-                  Design&nbsp;by&nbsp;<div class="glow">
-                    <p><a id="designer" style="text-decoration: none; font-size: 3vh;"
-                        href="https://github.com/Edu3071/Edu3071.github.io">Eduardo Viñoles</a></p>
-                  </div></span>
-              </p>
+
+            <div id="social" class="rounded-social-buttons">
+              <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
+                  class="fab fa-twitter"></i></a>
+              <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
+                  class="fab fa-linkedin"></i></a>
+              <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i
+                  class="fab fa-youtube"></i></a>
+              <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+                  class="fab fa-instagram"></i></a>
             </div>
+
+          </div>
+          <div class="col-md-auto">
+            <!-- Rights-->
+            <p class="rights"><span>&copy;&nbsp;</span><span
+                class="copyright-year"></span><span></span><span>.&nbsp;</span><span>All Rights
+                Reserved.</span><span>
+                Design&nbsp;by&nbsp;<div class="glow">
+                  <p><a id="designer" style="text-decoration: none; font-size: 3vh;"
+                      href="https://github.com/Edu3071/Edu3071.github.io">Eduardo Viñoles</a></p>
+                </div></span>
+            </p>
           </div>
         </div>
-      </footer>
     </div>
+    </footer>
+  </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"></script>
-    <script src="piza.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="piza.js"></script>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
   </div>
 </body>
 
 </html>
+
