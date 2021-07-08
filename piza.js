@@ -36,6 +36,7 @@ window.onload = function () {
     let subject = document.getElementById("subject")
     let phone = document.getElementById("phone")
     let message = document.getElementById("message")
+
     mail.addEventListener("change", checkMail)
     mail.addEventListener("focus", cleaner)
     addres.addEventListener("change", inputBlur)
@@ -50,6 +51,7 @@ window.onload = function () {
     phone.addEventListener("focus", cleaner)
     message.addEventListener("change", inputBlur)
     message.addEventListener("focus", cleaner)
+    
     let form = document.getElementById("contact-form")
     let btnSend = document.getElementById("formSend")
     form.addEventListener('submit', sendContact)
@@ -61,49 +63,46 @@ const esEmail = function (value) {
 const inputBlur = function (event) {
     if (this.value == "" || this.value == " ") {
         this.style.color = "red"
-        this.value = "You must provide data"
+        document.getElementById("alert").innerHTML = "You must provide data"
     }
     else if (!validarString(this.value)) {
-        this.style.color = "red"
-        this.p = "You must put valid data"
+        document.getElementById("alert").innerHTML = "You must put valid data"
     }
 
 }
 function checkMail(event) {
-    if (this.getAttribute("type") == "email" && !esEmail(this.value)) {
-        this.style.color = "red"
-        this.value = "Wrong email"
+    if (this.value == "" || this.value == " ") {
+        document.getElementById("alert").innerHTML = "You must provide data"
+    }
+    else if (this.getAttribute("type") == "email" && !esEmail(this.value)) {
+        document.getElementById("alert").innerHTML = "Wrong email"
     }
 }
 
 const inputBlurNumbrs = function (event) {
     if (this.value == "" || this.value == " ") {
-        this.style.color = "red"
-        this.value = "You must provide data"
+        document.getElementById("alert").innerHTML = "You must provide data"
     }
     else if (!validarNumber(this.value)) {
-        this.style.color = "red"
-        this.value = "You must put numbers"
+        document.getElementById("alert").innerHTML = "You must put numbers"
 
     }
 }
 const inputBlurName = function (event) {
     if (this.value == "" || this.value == " ") {
-        this.style.color = "red"
-        this.value = "You must provide data"
+        document.getElementById("alert").innerHTML = "You must provide data"
     }
     else if (!validarString(this.value)) {
-        this.style.color = "red"
-        this.value = "You must put letters"
+        document.getElementById("alert").innerHTML = "You must put letters"
     }
 }
 
 
 
 const cleaner = function (event) {
-    if (this.value == "You must provide data" || this.value == "You must put letters" || this.value == "You must put numbers" || this.value == "Wrong email" || this.value == "You must put valid data" || !this.value) {
-        this.value = ""
-        this.style.color = ""
+   let alert = document.getElementById("alert")
+    if (alert == "You must provide data" || alert == "You must put letters" || alert == "You must put numbers" || alert == "Wrong email" || alert == "You must put valid data") {
+        
         document.getElementById("alert").innerHTML = ""
 
     }
@@ -132,7 +131,7 @@ function validarString(cadenaAnalizar) {
     }
     return true
 }
-
+/////////////// validar form ///////////////
 const sendContact = function (event) {
 
     if (!checkForm()) {
@@ -142,6 +141,7 @@ const sendContact = function (event) {
         // le hacemos preventDefault, entonces no hace el submit (es decir, no envía el form)
         console.log('prevengo el submit porque hubo errores')
         event.preventDefault()
+        document.getElementById("alert").innerHTML = "Something went wrong"
     }
 
 }
