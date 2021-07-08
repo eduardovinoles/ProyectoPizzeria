@@ -62,26 +62,50 @@
             <div class="carousel-item active">
               <img src="./img/slide-1-1920x753.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
+                <div class="col-2" id="textSlide1">
+                  <h1>New York
+                </div>
+                <div class="col-3" id="textSlide1_2">
+                  <h1>brick <br />oven pizza</h1>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/slide-2-1920x753.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
+                <div class="col-2" id="textSlide2">
+                  <h1>THE BEST </h1>
+                </div>
+                <div class="col-3" id="textSlide2_2">
+                  <h1>NEW YORK STYLE PIZZA AROUND!</h1>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/brickOven.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
+                <div class="col-2" id="textSlide3">
+                  <h1>Hand-tossed dough</h1>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/bigHamb.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
+                <div class="col-2" id="textSlide4">
+                  <h1>Catering </h1>
+                </div>
+                <div class="col-3" id="textSlide4_2">
+                  <h2>for the office, home, and events. Let us do the work while you enjoy the party</h2>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
               <img src="./img/bvOlivePiza.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
+                <div class="col-3" id="textSlide5">
+                <h1>100% All Natural </h1></div>
+                <div class="col-3" id="textSlide5_2"><h3>Ingredient there is nothing better than the ultimate slice of pizza!</h3></div>
               </div>
             </div>
           </div>
@@ -280,30 +304,38 @@
           <div class="brand-title">Flor De Pizza</div>
 
           <div class="inputs">
-            <form name="contactForm" onsubmit="">
-              <label>EMAIL</label>
-              <div></div>
-              <input id="mail" class="form-label" type="email" placeholder="example@test.com" />
+            <form id="contact-form" action="https://paullieness.site/tarmac/contacto.php" method="POST"">
 
-              <label>ADDRESS</label>
-              <input id="addres" type="text" placeholder="street 123" />
+              <input type=" hidden" name="sitio" value="8ghV+6" />
 
-              <label>NAME</label>
-              <p></p>
-              <input id="name" type="text" placeholder="Name" />
+            <label>EMAIL</label>
+            <div></div>
 
-              <label>SUBJECT</label>
-              <input id="subject" type="text" placeholder="Subject" />
+            <input id="mail" name="email" type="email" placeholder="example@test.com" />
 
-              <label>PHONE</label>
-              <input id="phone" type="text" placeholder="Phone number" />
+            <label>ADDRESS</label>
+            <input id="addres" name="addres" type="text" placeholder="street" />
 
-              <label>MESSAGE</label>
-              <input id="message" type="textarea" placeholder="Any" />
+            <label>ADDRESS NUMBER</label>
+            <input id="addresNumber" name="addresNumber" type="text" placeholder=" 123" />
 
 
-              <button id="formSend" type="submit">SEND</button>
-              <div id="alert" style="color: red;"></div>
+            <label>NAME</label>
+            <p></p>
+            <input id="name" name="name" type="text" placeholder="Name" />
+
+            <label>SUBJECT</label>
+            <input id="subject" name="subject" type="text" placeholder="Subject" />
+
+            <label>PHONE</label>
+            <input id="phone" name="phone" type="text" placeholder="Phone number" />
+
+            <label>MESSAGE</label>
+            <input id="message" name="message" type="text" placeholder="Any" />
+
+
+            <button id="formSend" type="submit">SEND</button>
+            <div id="alert" style="color: red;"></div>
             </form>
           </div>
         </div>
@@ -362,4 +394,3 @@
 </body>
 
 </html>
-
