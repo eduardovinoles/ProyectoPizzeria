@@ -823,3 +823,11 @@ body, html {
   display: inline-flexbox;
 
 }
+
+#designer {
+  /* display:inline-flexbox; */
+  margin-left: 10px;
+}
+#hiden {
+  display: none;
+}

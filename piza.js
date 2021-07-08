@@ -36,23 +36,23 @@ window.onload = function () {
     let subject = document.getElementById("subject")
     let phone = document.getElementById("phone")
     let message = document.getElementById("message")
-    mail.addEventListener("blur", checkMail)
+    mail.addEventListener("change", checkMail)
     mail.addEventListener("focus", cleaner)
-    addres.addEventListener("blur", inputBlur)
+    addres.addEventListener("change", inputBlur)
     addres.addEventListener("focus", cleaner)
-    addresNumber.addEventListener("blur", inputBlurNumbrs)
+    addresNumber.addEventListener("change", inputBlurNumbrs)
     addresNumber.addEventListener("focus", cleaner)
-    name.addEventListener("blur", inputBlurName)
+    name.addEventListener("change", inputBlurName)
     name.addEventListener("focus", cleaner)
-    subject.addEventListener("blur", inputBlur)
+    subject.addEventListener("change", inputBlur)
     subject.addEventListener("focus", cleaner)
-    phone.addEventListener("blur", inputBlurNumbrs)
+    phone.addEventListener("change", inputBlurNumbrs)
     phone.addEventListener("focus", cleaner)
-    message.addEventListener("blur", inputBlur)
+    message.addEventListener("change", inputBlur)
     message.addEventListener("focus", cleaner)
     let form = document.getElementById("contact-form")
     let btnSend = document.getElementById("formSend")
-    btnSend.addEventListener('click', sendContact)
+    form.addEventListener('submit', sendContact)
 }
 ///////validation form///////////
 const esEmail = function (value) {
@@ -65,7 +65,7 @@ const inputBlur = function (event) {
     }
     else if (!validarString(this.value)) {
         this.style.color = "red"
-        this.value = "You must put valid data"
+        this.p = "You must put valid data"
     }
 
 }
@@ -101,10 +101,12 @@ const inputBlurName = function (event) {
 
 
 const cleaner = function (event) {
-    this.value = ""
-    this.style.color = ""
-    document.getElementById("alert").innerHTML = ""
+    if (this.value == "You must provide data" || this.value == "You must put letters" || this.value == "You must put numbers" || this.value == "Wrong email" || this.value == "You must put valid data" || !this.value) {
+        this.value = ""
+        this.style.color = ""
+        document.getElementById("alert").innerHTML = ""
 
+    }
 }
 
 
@@ -132,6 +134,7 @@ function validarString(cadenaAnalizar) {
 }
 
 const sendContact = function (event) {
+
     if (!checkForm()) {
         // si no pasa las validaciones, entonces no lo dejamos hacer el submit
         // recordar que el preventDefault de un evento previene que el evento se siga ejecutando
@@ -144,28 +147,28 @@ const sendContact = function (event) {
 }
 
 const checkForm = function () {
-    let email = document.getElementById("mail")
-    let address = document.getElementById("addres")
-    let namE = document.getElementById("name")
-    let subjecT = document.getElementById("subject")
-    let phonE = document.getElementById("phone")
-    let messagE = document.getElementById("message")
+    let mail = document.getElementById("mail")
+    let addres = document.getElementById("addres")
+    let name = document.getElementById("name")
+    let subject = document.getElementById("subject")
+    let phone = document.getElementById("phone")
+    let message = document.getElementById("message")
     if (!esEmail(email.value)) {
         return false
     }
-    else if (address.value === "" || address.value === " " || !validarString(address.value)) {
+    else if (addres.value === "" || addres.value === " " || !validarString(address.value)) {
         return false
     }
-    else if (namE.value === "" || namE.value === " " || !validarString(namE.value)) {
+    else if (name.value === "" || name.value === " " || !validarString(namE.value)) {
         return false
     }
-    else if (subjecT.value === "" || subjecT.value === " " || !validarString(subjecT.value)) {
+    else if (subject.value === "" || subjecet.value === " " || !validarString(subjecT.value)) {
         return false
     }
-    else if (phonE.value === "" || phonE.value === " " || !validarNumber(phonE.value)) {
+    else if (phone.value === "" || phone.value === " " || !validarNumber(phonE.value)) {
         return false
     }
-    else if (messagE.value === "" || massagE === " " || !validarString(messagE.value)) {
+    else if (message.value === "" || message === " " || !validarString(messagE.value)) {
         return false
     }
 
