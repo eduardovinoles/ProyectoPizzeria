@@ -37,21 +37,21 @@ window.onload = function () {
     let phone = document.getElementById("phone")
     let message = document.getElementById("message")
 
-    mail.addEventListener("change", checkMail)
+    mail.addEventListener("blur", checkMail)
     mail.addEventListener("focus", cleaner)
-    addres.addEventListener("change", inputBlur)
+    addres.addEventListener("blur", inputBlur)
     addres.addEventListener("focus", cleaner)
-    addresNumber.addEventListener("change", inputBlurNumbrs)
+    addresNumber.addEventListener("blur", inputBlurNumbrs)
     addresNumber.addEventListener("focus", cleaner)
-    name.addEventListener("change", inputBlurName)
+    name.addEventListener("blur", inputBlurName)
     name.addEventListener("focus", cleaner)
-    subject.addEventListener("change", inputBlur)
+    subject.addEventListener("blur", inputBlur)
     subject.addEventListener("focus", cleaner)
-    phone.addEventListener("change", inputBlurNumbrs)
+    phone.addEventListener("blur", inputBlurNumbrs)
     phone.addEventListener("focus", cleaner)
-    message.addEventListener("change", inputBlur)
+    message.addEventListener("blur", inputBlur)
     message.addEventListener("focus", cleaner)
-    
+
     let form = document.getElementById("contact-form")
     let btnSend = document.getElementById("formSend")
     form.addEventListener('submit', sendContact)
@@ -60,9 +60,30 @@ window.onload = function () {
 const esEmail = function (value) {
     return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value)
 }
+function validarNumber(cadenaAnalizar) {
+    for (var i = 0; i < cadenaAnalizar.length; i++) {
+        var caracter = cadenaAnalizar.charCodeAt(i);
+        if ((caracter != 32) && (caracter < 48 || caracter > 57)) {
+            return false;
+        }
+    }
+    return true
+}
+
+function validarString(cadenaAnalizar) {
+    for (var i = 0; i < cadenaAnalizar.length; i++) {
+        var caracter = cadenaAnalizar.charCodeAt(i);
+        if ((caracter != 32) && (caracter < 65 || caracter > 90) && (caracter < 97 || caracter > 122)) {
+            return false;
+        }
+
+    }
+    return true
+}
+
+
 const inputBlur = function (event) {
     if (this.value == "" || this.value == " ") {
-        this.style.color = "red"
         document.getElementById("alert").innerHTML = "You must provide data"
     }
     else if (!validarString(this.value)) {
@@ -100,9 +121,9 @@ const inputBlurName = function (event) {
 
 
 const cleaner = function (event) {
-   let alert = document.getElementById("alert")
-    if (alert == "You must provide data" || alert == "You must put letters" || alert == "You must put numbers" || alert == "Wrong email" || alert == "You must put valid data") {
-        
+    let alert = document.getElementById("alert")
+    if (alert.value != "") {
+
         document.getElementById("alert").innerHTML = ""
 
     }
@@ -111,34 +132,11 @@ const cleaner = function (event) {
 
 
 
-function validarNumber(cadenaAnalizar) {
-    for (var i = 0; i < cadenaAnalizar.length; i++) {
-        var caracter = cadenaAnalizar.charCodeAt(i);
-        if ((caracter != 32) && (caracter < 48 || caracter > 57)) {
-            return false;
-        }
-    }
-    return true
-}
 
-function validarString(cadenaAnalizar) {
-    for (var i = 0; i < cadenaAnalizar.length; i++) {
-        var caracter = cadenaAnalizar.charCodeAt(i);
-        if ((caracter != 32) && (caracter < 65 || caracter > 90) && (caracter < 97 || caracter > 122)) {
-            return false;
-        }
-
-    }
-    return true
-}
 /////////////// validar form ///////////////
 const sendContact = function (event) {
 
     if (!checkForm()) {
-        // si no pasa las validaciones, entonces no lo dejamos hacer el submit
-        // recordar que el preventDefault de un evento previene que el evento se siga ejecutando
-        // por ejemplo en este caso que el botón haría un submit del form, si nosotros
-        // le hacemos preventDefault, entonces no hace el submit (es decir, no envía el form)
         console.log('prevengo el submit porque hubo errores')
         event.preventDefault()
         document.getElementById("alert").innerHTML = "Something went wrong"
@@ -148,27 +146,32 @@ const sendContact = function (event) {
 
 const checkForm = function () {
     let mail = document.getElementById("mail")
+    console.log(mail.value)
     let addres = document.getElementById("addres")
+    let addresNumber = document.getElementById("addresNumber")
+    console.log(addres.value)
     let name = document.getElementById("name")
+    console.log(name.value)
     let subject = document.getElementById("subject")
+    console.log(subject.value)
     let phone = document.getElementById("phone")
+    console.log(phone.value)
     let message = document.getElementById("message")
-    if (!esEmail(email.value)) {
+    console.log(message.value)
+
+    if (!esEmail(mail.value)) {
         return false
-    }
-    else if (addres.value === "" || addres.value === " " || !validarString(address.value)) {
+    } else if (addres.value === "" || addres.value === " " || !validarString(addres.value)) {
         return false
-    }
-    else if (name.value === "" || name.value === " " || !validarString(namE.value)) {
+    } else if (addresNumber.value === "" || addresNumber.value === " " || !validarNumber(addresNumber.value)) {
         return false
-    }
-    else if (subject.value === "" || subjecet.value === " " || !validarString(subjecT.value)) {
+    } else if (name.value === "" || name.value === " " || !validarString(name.value)) {
         return false
-    }
-    else if (phone.value === "" || phone.value === " " || !validarNumber(phonE.value)) {
+    } else if (subject.value === "" || subject.value === " " || !validarString(subject.value)) {
         return false
-    }
-    else if (message.value === "" || message === " " || !validarString(messagE.value)) {
+    } else if (phone.value === "" || phone.value === " " || !validarNumber(phone.value)) {
+        return false
+    } else if (message.value === "" || message === " " || !validarString(message.value)) {
         return false
     }
 
