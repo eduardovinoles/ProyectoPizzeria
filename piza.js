@@ -29,6 +29,9 @@ document.querySelector("#textSlide5_2").classList.add('magictime', 'tinRightIn')
 
 /////////////////////////////
 window.onload = function () {
+
+
+
     let mail = document.getElementById("mail")
     let addres = document.getElementById("addres")
     let addresNumber = document.getElementById("addresNumber")
@@ -51,7 +54,6 @@ window.onload = function () {
     phone.addEventListener("focus", cleaner)
     message.addEventListener("blur", inputBlur)
     message.addEventListener("focus", cleaner)
-
     let form = document.getElementById("contact-form")
     let btnSend = document.getElementById("formSend")
     form.addEventListener('submit', sendContact)
@@ -180,6 +182,14 @@ const checkForm = function () {
 }
 
 
+//////close video modal////////////
 
-
+window.onclick = function (event) {
+    let modalOut = document.getElementById("exampleModal")
+    if (event.target === modalOut) {
+        let video = document.getElementById("video")
+        video.src = " "
+    }
+    video.src = "https://www.youtube.com/embed/pTS5wevgGKs"
+}
 
