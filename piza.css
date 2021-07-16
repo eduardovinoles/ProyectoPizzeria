@@ -796,6 +796,7 @@ body, html {
   width: 48px;
   display: inline-block;
   cursor: pointer;
+  color: #228dff;
 }
 #circle{
   width: 20px;
