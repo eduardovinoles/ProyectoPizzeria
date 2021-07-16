@@ -52,6 +52,14 @@
               </a></p>
           </div>
         </div>
+        <div class="d-inline-block align-text-top">
+          <div id="cartNav">
+            <div id="circle">0</div>
+            <a href="#cart"><img id="cartIcon"
+              src="https://cdn0.iconfinder.com/data/icons/elasto-online-store/26/00-ELASTOFONT-STORE-READY_cart-128.png"
+              alt=""></a>
+          </div>
+        </div>
       </nav>
     </div>
     <!--Carousel-->
@@ -125,7 +133,8 @@
           <div class="card-body">
             <h5 class="card-title">Champigniones</h5>
             <p class="card-text">Pizzeta con aceitunas negras, tomate y champigniones .</p>
-            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 199</span>
+            <button id="champigniones" class="custom-btn btn-6"><span>Add to cart</span></button><span> 199</span>
+            <input style="width: 15%;" class="amount" type="number" value="1" step="1" min="1">
           </div>
         </div>
       </div>
@@ -137,7 +146,8 @@
           <div class="card-body">
             <h5 class="card-title">Hamburguesa</h5>
             <p class="card-text">Las mejores hamburguesas de la ciudad grandes y sabrosas.</p>
-            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 189</span>
+            <button id="hamburguesa" class="custom-btn btn-6"><span>Add to cart</span></button><span> 189</span>
+            <input style="width: 15%;" class="amount" type="number" value="1" step="1" min="1">
           </div>
         </div>
       </div>
@@ -149,7 +159,8 @@
           <div class="card-body">
             <h5 class="card-title">Aceitunas negras</h5>
             <p class="card-text">Deliciosa pizzeta de aceitunas negras y tomate .</p>
-            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 175</span>
+            <button id="aceitunasNegras" class="custom-btn btn-6"><span>Add to cart</span></button><span> 175</span>
+            <input style="width: 15%;" class="amount" type="number" value="1" step="1" min="1">
           </div>
         </div>
       </div>
@@ -163,7 +174,8 @@
           <div class="card-body">
             <h5 class="card-title">Papas fritas</h5>
             <p class="card-text">Ricas y crocantes hechas de papas seleccionadas .</p>
-            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 165</span>
+            <button id="papas" class="custom-btn btn-6"><span>Add to cart</span></button><span> 165</span>
+            <input style="width: 15%;" class="amount" type="number" value="1" step="1" min="1">
           </div>
         </div>
       </div>
@@ -175,22 +187,26 @@
           <div class="card-body">
             <h5 class="card-title">Sandwiche</h5>
             <p class="card-text">Pan fresco americano cortado fino y crujiente, el mas rico jamon y queso.</p>
-            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 200</span>
+            <button id="sandwich" class="custom-btn btn-6"><span>Add to cart</span></button><span> 200</span>
+            <input style="width: 15%;" class="amount" type="number" value="1" step="1" min="1">
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="vanishTrigger card box-shadow mx-auto my-5" style="width: 18rem;">
           <div>
-            <img src="./img/NicePng_pizza-slice-png_6101.png" class="card-img-top" alt="...">
+            <img src="./img/NicePng_pizza-slice-png_6101.png" class="card-img-top" alt="..." style="margin-top: 17%;">
           </div>
           <div class="card-body">
             <h5 class="card-title">Muzzarella</h5>
             <p class="card-text">Pizza muzzarella por porcion , no se quede sin probar la mas rica de la region.</p>
-            <button class="custom-btn btn-6"><span>Comprar</span></button><span>$ 170</span>
+            <button id="muza" class="custom-btn btn-6"><span>Add to cart</span></button><span> 170</span>
+            <input style="width: 15%;" class="amount" type="number" value="1" step="1" min="1">
           </div>
         </div>
       </div>
+    </div>
+    <div class="row cart">
     </div>
     <!--Paralax-->
     <div class=" row container3 parallax2">
@@ -198,13 +214,13 @@
       </div>
       <div class="col-6 content3">
         <div>
-          <h1>BEER</h1>
-          <p>30% FREE <br /> Monday & Tuesday.</p>
+          <h1 style="font-size:7vh;">BEER</h1>
+          <p style="font-size:3vh;">30% FREE <br /> Monday & Tuesday.</p>
         </div>
       </div>
     </div>
     <!-- experimental -->
-    
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -212,8 +228,8 @@
           <div class="modal-header">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <iframe width="100%" id="video" height="315" src="https://www.youtube.com/embed/pTS5wevgGKs" title="YouTube video player"
-            frameborder="0"
+          <iframe width="100%" id="video" height="315" src="https://www.youtube.com/embed/pTS5wevgGKs"
+            title="YouTube video player" frameborder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
@@ -237,7 +253,6 @@
       <div class="col-4">
         <img src="./img/dish.jpg" style="width: 100%;">
       </div>
-
     </div>
     <!-- prominent -->
     <div class="row mt-4">
@@ -271,16 +286,23 @@
       </div>
       <div class="col-6 content">
         <div>
-          <h1>El mejor ambiente</h1>
-          <p>Flor de Pizza es el lugar <br /> de la mejor pizza y calidad en servicio.</p>
+          <h1 style="font-size:6vh;">El mejor ambiente</h1>
+          <p style="font-size:3vh;">Flor de Pizza es el lugar <br /> de la mejor pizza y calidad en servicio.</p>
         </div>
       </div>
     </div>
-    <!-- contact form -->
+    <!-- cart -->
     <div id="section2" class="row">
       <div class="col-sm-12 col-md-6 formSide">
-
+        <div id="cart">
+          <hr id="cartChild">
+          <div class="total">
+            Total:<span id="totalPrice">0 $</span>
+          </div>
+          <button class="AddToCart custom-btn btn-6">Buy</button>
+        </div>
       </div>
+      <!-- contact form -->
       <div class="col-6 formControl">
         <div class="contact">
           <div class="brand-logo"></div>

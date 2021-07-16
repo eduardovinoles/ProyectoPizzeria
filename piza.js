@@ -63,8 +63,8 @@ const esEmail = function (value) {
     return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(value)
 }
 function validarNumber(cadenaAnalizar) {
-    for (var i = 0; i < cadenaAnalizar.length; i++) {
-        var caracter = cadenaAnalizar.charCodeAt(i);
+    for (let i = 0; i < cadenaAnalizar.length; i++) {
+        let caracter = cadenaAnalizar.charCodeAt(i);
         if ((caracter != 32) && (caracter < 48 || caracter > 57)) {
             return false;
         }
@@ -73,8 +73,8 @@ function validarNumber(cadenaAnalizar) {
 }
 
 function validarString(cadenaAnalizar) {
-    for (var i = 0; i < cadenaAnalizar.length; i++) {
-        var caracter = cadenaAnalizar.charCodeAt(i);
+    for (let i = 0; i < cadenaAnalizar.length; i++) {
+        let caracter = cadenaAnalizar.charCodeAt(i);
         if ((caracter != 32) && (caracter < 65 || caracter > 90) && (caracter < 97 || caracter > 122)) {
             return false;
         }
@@ -193,3 +193,118 @@ window.onclick = function (event) {
     video.src = "https://www.youtube.com/embed/pTS5wevgGKs"
 }
 
+// ////////cart////////////
+window.onload = function () {
+
+    let cartItems = {
+        picture: "",
+        productName: "",
+        quantity: "",
+        price: "",
+        closePicture: "https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-128.png"
+    };
+
+    let cart = document.getElementById('cart')
+    let champButton = document.getElementById("champigniones")
+    let hambButton = document.getElementById("hamburguesa")
+    let aceitunasNegrasButton = document.getElementById("aceitunasNegras")
+    let papas = document.getElementById("papas")
+    let sandwich = document.getElementById("sandwich")
+    let muza = document.getElementById("muza")
+
+    let counter = 0;
+    let cartIcon = document.getElementById('cartIcon')
+    let cartChild = document.getElementById('cartChild')
+    let totalPrice = document.getElementById('totalPrice')
+
+    champButton.onclick = addToCart
+    hambButton.onclick = addToCart
+    aceitunasNegrasButton.onclick = addToCart
+    papas.onclick = addToCart
+    sandwich.onclick = addToCart
+    muza.onclick = addToCart
+
+    function addToCart() {
+
+        cartItems.picture = this.parentNode.parentNode.children[0].childNodes[1].getAttribute('src')
+        cartItems.productName = this.parentNode.children[0].innerHTML
+        cartItems.quantity = this.parentNode.children[4].value
+        console.log(cartItems.quantity)
+
+        cartItems.price = parseInt(this.parentNode.children[3].innerHTML)
+        console.log(cartItems.price)
+
+
+        let div = document.createElement('div')
+        div.classList.add("cartElement")
+        let img = document.createElement('img')
+        img.classList.add("productPicture")
+        img.setAttribute("src", cartItems.picture)
+        let h4 = document.createElement('h4')
+        h4.innerHTML = cartItems.productName
+        let span1 = document.createElement('span')
+        span1.innerHTML = cartItems.quantity + " Item"
+        let div2 = document.createElement('div')
+        div2.classList.add("price")
+        div2.innerHTML = cartItems.price * cartItems.quantity + " $"
+        let img2 = document.createElement('img')
+        img2.classList.add("close")
+        img2.setAttribute("src", cartItems.closePicture)
+
+        //console.log(div2);
+
+        cart.insertBefore(div, cartChild)
+        div.appendChild(img)
+        div.appendChild(h4)
+        div.appendChild(span1)
+        div.appendChild(div2)
+        div.appendChild(img2)
+
+
+        let close = document.getElementsByClassName('close')
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                let parent = this.parentNode.parentNode
+                let child = this.parentNode
+                parent.removeChild(child)
+                counter--
+                circle.innerHTML = counter
+                totalSum()
+            }
+        }
+
+        let circle = document.getElementById('circle')
+        counter++
+        circle.innerHTML = counter
+
+        function totalSum() {
+            let summ = 0
+            let elementsPrice = document.getElementsByClassName('price')
+            for (i = 0; i < elementsPrice.length; i++) {
+                summ += parseInt(elementsPrice[i].innerHTML)
+                totalPrice.innerHTML = summ + " $"
+            }
+            if (elementsPrice.length == 0) {
+                summ = 0
+                totalPrice.innerHTML = summ + " $"
+            }
+        }
+        totalSum()
+        //console.log(elementsPrice[i])
+    }
+
+    // cartIcon.onclick = function openCart() {
+    //     if (cart.style.display == "inline-block") {
+    //         cart.style.display = "none"
+    //     }
+    //     else {
+    //         cart.style.display = "inline-block"
+    //     }
+    // }
+
+
+
+
+
+
+}

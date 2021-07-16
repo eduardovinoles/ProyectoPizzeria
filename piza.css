@@ -29,7 +29,7 @@ footer {
 }
 /*cards*/
 .card { 
-  height: 450px;
+  height: 85%;
 }
 .card h5 {
   font-size: 2em; 
@@ -224,12 +224,15 @@ body, html {
 }
 .container2 .content > h1 {
   font-family: Iceland;
-  font-size: 3em;
+  font-size: 6vh;
   text-shadow: 1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
 
 }
+.container2 .content > p {
+  font-size: 4vh;
+}
 .container2:hover .content {
-  transform: translate(-70%);
+  transform: translate(-50%);
   color:yellow;
   background: rgba(6,6,6, 0.35);
   
@@ -255,7 +258,7 @@ body, html {
 .container3 .content3 {
   position: absolute; /* Position the background text */
   bottom: 20%; /* At the bottom. Use top:0 to append it to the top */
-  text-align: left;
+  text-align: right;
   background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.0); /* Black background with 0.5 opacity */
   color: rgba(0, 0, 0, 0); /* Grey text */
@@ -265,12 +268,15 @@ body, html {
 }
 .container3 .content3 > h1 {
   font-family: Iceland;
-  font-size: 3em;
+  font-size: 6vh;
   text-shadow: 1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
 
 }
+.container3 .content3 > p {
+  font-size: 4vh;
+}
 .container3:hover .content3 {
-  transform: translate(70%);
+  transform: translate(-70%);
   color:yellow;
   background: rgba(6,6,6, 0.35);
   
@@ -361,9 +367,9 @@ body, html {
 }
 
 .avery img {
-  margin-left: 114px;
+  margin-left: 0%;
   height: 350px;
-  /* width: 350px; */
+  width: auto;
 }
 
 .destacado{
@@ -743,4 +749,121 @@ body, html {
 }
 .rights {
   font-size: 1em;
+}
+/* cart */
+#cart{
+  width: 310px;
+  height: 100%;
+  padding: 10px;
+  /* border: 1px grey solid; */
+  position: relative;
+  top: 32px;
+  overflow: auto;
+  border-radius: 20px;
+  display: block;
+  margin-left: 7%;
+  text-align: center;
+}
+#cartChild{
+  height: 3px;
+  background-color: grey;
+  border: none;
+  position: relative;
+  top: -10px;
+}
+.cartElement{
+  width: 285px;
+  height: 86px;
+  border-bottom: 1px grey solid;
+  margin-top: 5px;
+  margin-left: 2px;
+  position: relative;
+}
+.cartElement h4{
+  margin-top: 20px;
+}
+#cartNav{
+  position: absolute;
+  top: 100%;
+  right:1%;
+  font-size: 3vh;
+  
+}
+#cartNav p {
+  font-size: 3vh;
+}
+#cartIcon{
+  width: 48px;
+  display: inline-block;
+  cursor: pointer;
+}
+#circle{
+  width: 20px;
+  height: 20px;
+  background-color: #ff4242;
+  border-radius: 20px;
+  text-align: center;
+  color: cornsilk;
+  position: absolute;
+  top: 30%;
+  /* left: 876px; */
+  font-size: 14px;
+}
+.amount{
+  width: 28px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 5px;
+}
+/* .product img{
+  width: 8rem;
+  margin: 0 auto;
+} */
+.productPicture{
+  width: 80px;
+  float: left;
+}
+.close{
+  width: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+#totalPrice{
+  float: right;
+}
+.product{
+  width: 175px;
+  height: 285px;
+  border: 1px black solid;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 30px;
+}
+.cart h2{
+  margin: 5px 0px -10px 0px;
+  font-size: 18px;
+}
+
+.cart h3{
+  margin: 0px;
+  font-size: 16px;
+}
+.cart h4{
+  margin: 8px 0px 0px 8px;
+  font-size: 14px;
+}
+.total{
+  width: 170px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0px 0px 0px 15px;
+  position: relative;
+  top: -10px;
+}
+#cart .price {
+    text-align: right;
 }
