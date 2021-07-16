@@ -781,6 +781,7 @@ body, html {
 }
 .cartElement h4{
   margin-top: 20px;
+  color: #228dff;
 }
 #cartNav{
   position: absolute;
@@ -856,6 +857,7 @@ body, html {
 .cart h4{
   margin: 8px 0px 0px 8px;
   font-size: 14px;
+  color: #228dff;
 }
 .total{
   width: 170px;
