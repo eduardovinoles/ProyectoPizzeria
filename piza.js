@@ -202,7 +202,7 @@ window.onload = function () {
         quantity: "",
         price: "",
         closePicture: "https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-128.png"
-    };
+    }
 
     let cart = document.getElementById('cart')
     let champButton = document.getElementById("champigniones")
@@ -216,7 +216,8 @@ window.onload = function () {
     let cartIcon = document.getElementById('cartIcon')
     let cartChild = document.getElementById('cartChild')
     let totalPrice = document.getElementById('totalPrice')
-
+    let checkCart = document.getElementById("checkCart")
+    checkCart.addEventListener("click", addToForm)
     champButton.onclick = addToCart
     hambButton.onclick = addToCart
     aceitunasNegrasButton.onclick = addToCart
@@ -229,10 +230,7 @@ window.onload = function () {
         cartItems.picture = this.parentNode.parentNode.children[0].childNodes[1].getAttribute('src')
         cartItems.productName = this.parentNode.children[0].innerHTML
         cartItems.quantity = this.parentNode.children[4].value
-        console.log(cartItems.quantity)
-
         cartItems.price = parseInt(this.parentNode.children[3].innerHTML)
-        console.log(cartItems.price)
 
 
         let div = document.createElement('div')
@@ -290,21 +288,58 @@ window.onload = function () {
             }
         }
         totalSum()
-        //console.log(elementsPrice[i])
     }
 
-    // cartIcon.onclick = function openCart() {
-    //     if (cart.style.display == "inline-block") {
-    //         cart.style.display = "none"
-    //     }
-    //     else {
-    //         cart.style.display = "inline-block"
-    //     }
+
+
+}
+const addToForm = function (event) {
+    let lista = this.parentNode.getElementsByClassName("cartElement")
+    // console.log(lista)
+
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+    var theUrl = "http://localhost:3000";
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+            console.log(xmlhttp.response);
+        }
+    }
+    xmlhttp.open("POST", theUrl);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.withCredentials = false;
+    xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+    let payload = []
+
+
+    for (element of lista) {
+        // console.log(element)
+        let name = element.attributes.class.ownerElement.childNodes[1].childNodes[0].parentElement.firstChild.parentElement.innerHTML
+        let items = element.attributes.class.ownerElement.childNodes[1].childNodes[0].parentElement.firstChild.parentElement.nextElementSibling.lastChild.data
+        let price = element.attributes.class.ownerElement.childNodes[1].childNodes[0].parentElement.firstChild.parentElement.nextElementSibling.nextElementSibling.innerHTML
+
+        payload.push({ name, items, price })
+    }
+
+    xmlhttp.send(JSON.stringify(payload));
+
+
+    // for (element of lista) {
+    //     console.log(element)
+    //     let name = element.attributes.class.ownerElement.childNodes[1].childNodes[0].parentElement.firstChild.parentElement.innerHTML
+    //     let items = element.attributes.class.ownerElement.childNodes[1].childNodes[0].parentElement.firstChild.parentElement.nextElementSibling.lastChild.data
+    //     let price = element.attributes.class.ownerElement.childNodes[1].childNodes[0].parentElement.firstChild.parentElement.nextElementSibling.nextElementSibling.innerHTML
+
+    //     let input = document.createElement("input")
+
+    //     input.setAttribute("type", "hidden")
+
+    //     input.setAttribute("name", "Product")
+
+    //     input.setAttribute("value", items+"/"+ name+"/"+price)
+    //     console.log(name, items, price)
+
+    //     //append to form element that you want .
+    //     document.getElementById("contact-form").appendChild(input)
     // }
-
-
-
-
-
 
 }
