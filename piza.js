@@ -30,7 +30,99 @@ document.querySelector("#textSlide5_2").classList.add('magictime', 'tinRightIn')
 /////////////////////////////
 window.onload = function () {
 
+    let cartItems = {
+        picture: "",
+        productName: "",
+        quantity: "",
+        price: "",
+        closePicture: "https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-128.png"
+    }
 
+    let cart = document.getElementById('cart')
+    let champButton = document.getElementById("champigniones")
+    let hambButton = document.getElementById("hamburguesa")
+    let aceitunasNegrasButton = document.getElementById("aceitunasNegras")
+    let papas = document.getElementById("papas")
+    let sandwich = document.getElementById("sandwich")
+    let muza = document.getElementById("muza")
+
+    let counter = 0;
+    let cartIcon = document.getElementById('cartIcon')
+    let cartChild = document.getElementById('cartChild')
+    let totalPrice = document.getElementById('totalPrice')
+    let checkCart = document.getElementById("checkCart")
+    checkCart.addEventListener("click", addToForm)
+    champButton.onclick = addToCart
+    hambButton.onclick = addToCart
+    aceitunasNegrasButton.onclick = addToCart
+    papas.onclick = addToCart
+    sandwich.onclick = addToCart
+    muza.onclick = addToCart
+
+    function addToCart() {
+
+        cartItems.picture = this.parentNode.parentNode.children[0].childNodes[1].getAttribute('src')
+        cartItems.productName = this.parentNode.children[0].innerHTML
+        cartItems.quantity = this.parentNode.children[4].value
+        cartItems.price = parseInt(this.parentNode.children[3].innerHTML)
+
+
+        let div = document.createElement('div')
+        div.classList.add("cartElement")
+        let img = document.createElement('img')
+        img.classList.add("productPicture")
+        img.setAttribute("src", cartItems.picture)
+        let h4 = document.createElement('h4')
+        h4.innerHTML = cartItems.productName
+        let span1 = document.createElement('span')
+        span1.innerHTML = cartItems.quantity + " Item"
+        let div2 = document.createElement('div')
+        div2.classList.add("price")
+        div2.innerHTML = cartItems.price * cartItems.quantity + " $"
+        let img2 = document.createElement('img')
+        img2.classList.add("close")
+        img2.setAttribute("src", cartItems.closePicture)
+
+        //console.log(div2);
+
+        cart.insertBefore(div, cartChild)
+        div.appendChild(img)
+        div.appendChild(h4)
+        div.appendChild(span1)
+        div.appendChild(div2)
+        div.appendChild(img2)
+
+
+        let close = document.getElementsByClassName('close')
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                let parent = this.parentNode.parentNode
+                let child = this.parentNode
+                parent.removeChild(child)
+                counter--
+                circle.innerHTML = counter
+                totalSum()
+            }
+        }
+
+        let circle = document.getElementById('circle')
+        counter++
+        circle.innerHTML = counter
+
+        function totalSum() {
+            let summ = 0
+            let elementsPrice = document.getElementsByClassName('price')
+            for (i = 0; i < elementsPrice.length; i++) {
+                summ += parseInt(elementsPrice[i].innerHTML)
+                totalPrice.innerHTML = summ + " $"
+            }
+            if (elementsPrice.length == 0) {
+                summ = 0
+                totalPrice.innerHTML = summ + " $"
+            }
+        }
+        totalSum()
+    }
 
     let mail = document.getElementById("mail")
     let addres = document.getElementById("addres")
@@ -193,106 +285,107 @@ window.onclick = function (event) {
     video.src = "https://www.youtube.com/embed/pTS5wevgGKs"
 }
 
-// ////////cart////////////
-window.onload = function () {
+ ////////cart////////////
+ 
+// window.onload = function () {
 
-    let cartItems = {
-        picture: "",
-        productName: "",
-        quantity: "",
-        price: "",
-        closePicture: "https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-128.png"
-    }
+//     let cartItems = {
+//         picture: "",
+//         productName: "",
+//         quantity: "",
+//         price: "",
+//         closePicture: "https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-128.png"
+//     }
 
-    let cart = document.getElementById('cart')
-    let champButton = document.getElementById("champigniones")
-    let hambButton = document.getElementById("hamburguesa")
-    let aceitunasNegrasButton = document.getElementById("aceitunasNegras")
-    let papas = document.getElementById("papas")
-    let sandwich = document.getElementById("sandwich")
-    let muza = document.getElementById("muza")
+//     let cart = document.getElementById('cart')
+//     let champButton = document.getElementById("champigniones")
+//     let hambButton = document.getElementById("hamburguesa")
+//     let aceitunasNegrasButton = document.getElementById("aceitunasNegras")
+//     let papas = document.getElementById("papas")
+//     let sandwich = document.getElementById("sandwich")
+//     let muza = document.getElementById("muza")
 
-    let counter = 0;
-    let cartIcon = document.getElementById('cartIcon')
-    let cartChild = document.getElementById('cartChild')
-    let totalPrice = document.getElementById('totalPrice')
-    let checkCart = document.getElementById("checkCart")
-    checkCart.addEventListener("click", addToForm)
-    champButton.onclick = addToCart
-    hambButton.onclick = addToCart
-    aceitunasNegrasButton.onclick = addToCart
-    papas.onclick = addToCart
-    sandwich.onclick = addToCart
-    muza.onclick = addToCart
+//     let counter = 0;
+//     let cartIcon = document.getElementById('cartIcon')
+//     let cartChild = document.getElementById('cartChild')
+//     let totalPrice = document.getElementById('totalPrice')
+//     let checkCart = document.getElementById("checkCart")
+//     checkCart.addEventListener("click", addToForm)
+//     champButton.onclick = addToCart
+//     hambButton.onclick = addToCart
+//     aceitunasNegrasButton.onclick = addToCart
+//     papas.onclick = addToCart
+//     sandwich.onclick = addToCart
+//     muza.onclick = addToCart
 
-    function addToCart() {
+//     function addToCart() {
 
-        cartItems.picture = this.parentNode.parentNode.children[0].childNodes[1].getAttribute('src')
-        cartItems.productName = this.parentNode.children[0].innerHTML
-        cartItems.quantity = this.parentNode.children[4].value
-        cartItems.price = parseInt(this.parentNode.children[3].innerHTML)
-
-
-        let div = document.createElement('div')
-        div.classList.add("cartElement")
-        let img = document.createElement('img')
-        img.classList.add("productPicture")
-        img.setAttribute("src", cartItems.picture)
-        let h4 = document.createElement('h4')
-        h4.innerHTML = cartItems.productName
-        let span1 = document.createElement('span')
-        span1.innerHTML = cartItems.quantity + " Item"
-        let div2 = document.createElement('div')
-        div2.classList.add("price")
-        div2.innerHTML = cartItems.price * cartItems.quantity + " $"
-        let img2 = document.createElement('img')
-        img2.classList.add("close")
-        img2.setAttribute("src", cartItems.closePicture)
-
-        //console.log(div2);
-
-        cart.insertBefore(div, cartChild)
-        div.appendChild(img)
-        div.appendChild(h4)
-        div.appendChild(span1)
-        div.appendChild(div2)
-        div.appendChild(img2)
+//         cartItems.picture = this.parentNode.parentNode.children[0].childNodes[1].getAttribute('src')
+//         cartItems.productName = this.parentNode.children[0].innerHTML
+//         cartItems.quantity = this.parentNode.children[4].value
+//         cartItems.price = parseInt(this.parentNode.children[3].innerHTML)
 
 
-        let close = document.getElementsByClassName('close')
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function () {
-                let parent = this.parentNode.parentNode
-                let child = this.parentNode
-                parent.removeChild(child)
-                counter--
-                circle.innerHTML = counter
-                totalSum()
-            }
-        }
+//         let div = document.createElement('div')
+//         div.classList.add("cartElement")
+//         let img = document.createElement('img')
+//         img.classList.add("productPicture")
+//         img.setAttribute("src", cartItems.picture)
+//         let h4 = document.createElement('h4')
+//         h4.innerHTML = cartItems.productName
+//         let span1 = document.createElement('span')
+//         span1.innerHTML = cartItems.quantity + " Item"
+//         let div2 = document.createElement('div')
+//         div2.classList.add("price")
+//         div2.innerHTML = cartItems.price * cartItems.quantity + " $"
+//         let img2 = document.createElement('img')
+//         img2.classList.add("close")
+//         img2.setAttribute("src", cartItems.closePicture)
 
-        let circle = document.getElementById('circle')
-        counter++
-        circle.innerHTML = counter
+//         //console.log(div2);
 
-        function totalSum() {
-            let summ = 0
-            let elementsPrice = document.getElementsByClassName('price')
-            for (i = 0; i < elementsPrice.length; i++) {
-                summ += parseInt(elementsPrice[i].innerHTML)
-                totalPrice.innerHTML = summ + " $"
-            }
-            if (elementsPrice.length == 0) {
-                summ = 0
-                totalPrice.innerHTML = summ + " $"
-            }
-        }
-        totalSum()
-    }
+//         cart.insertBefore(div, cartChild)
+//         div.appendChild(img)
+//         div.appendChild(h4)
+//         div.appendChild(span1)
+//         div.appendChild(div2)
+//         div.appendChild(img2)
 
 
+//         let close = document.getElementsByClassName('close')
+//         for (i = 0; i < close.length; i++) {
+//             close[i].onclick = function () {
+//                 let parent = this.parentNode.parentNode
+//                 let child = this.parentNode
+//                 parent.removeChild(child)
+//                 counter--
+//                 circle.innerHTML = counter
+//                 totalSum()
+//             }
+//         }
 
-}
+//         let circle = document.getElementById('circle')
+//         counter++
+//         circle.innerHTML = counter
+
+//         function totalSum() {
+//             let summ = 0
+//             let elementsPrice = document.getElementsByClassName('price')
+//             for (i = 0; i < elementsPrice.length; i++) {
+//                 summ += parseInt(elementsPrice[i].innerHTML)
+//                 totalPrice.innerHTML = summ + " $"
+//             }
+//             if (elementsPrice.length == 0) {
+//                 summ = 0
+//                 totalPrice.innerHTML = summ + " $"
+//             }
+//         }
+//         totalSum()
+//     }
+
+
+
+// }
 
 
 const addToForm = function (event) {
