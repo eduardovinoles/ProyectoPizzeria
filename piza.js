@@ -303,8 +303,8 @@ const addToForm = function (event) {
     var theUrl = "http://localhost:3000";
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-            let toast = document.querySelector(".toast")
-           toast.show()
+            let tost = document.querySelector(".toast")
+            tost.toast('show')
             console.log(xmlhttp.response);
         }
     }
