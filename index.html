@@ -31,31 +31,38 @@
     <!--Navbar-->
     <div class="row sticky-md-top">
       <nav id="myNav" class="navbar navbar-expand-md ">
-        <div class="col-xs-2 col-md-2 col-lg-3">
-          <a href="#section1"><img id="magic" src="./img/logo.png" alt="" width="120"
-              class="d-inline-block align-text-top"></a>
-        </div>
-        <div clas="col-xs-6 col-md-3 col-lg-4 d-flex oro">
-          <h1 class="gold" data-heading="Flor de Pizza">Flor de Pizza</h1>
-        </div>
-        <div class="col-2 align-self-end">
-          <div id="glow" class="glow">
-            <p><a href="#menu">
-                Menu
-              </a></p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" style="width:10% ;border-color: royalblue;"aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="col-xs-2 col-md-2 col-lg-3">
+            <a href="#section1"><img id="magic" src="./img/logo.png" alt="" width="120"
+                class="d-inline-block align-text-top"></a>
           </div>
-        </div>
-        <div class="col-3 align-self-end">
-          <div id="glow" class="glow ">
-            <p><a href="#section2">
-                Contact
-              </a></p>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <div clas="col-xs-6 col-md-3 col-lg-4 d-flex oro">
+            <h1 class="gold" data-heading="Flor de Pizza">Flor de Pizza</h1>
           </div>
-        </div>
-        <div class="d-inline-block align-text-top">
-          <div id="cartNav">
-            <div id="circle">0</div>
-            <a href="#cart"><img id="cartIcon" src="./img/cart_Icon.png" alt=""></a>
+          <div class="col-2 align-self-end">
+            <div id="glow" class="glow">
+              <p><a href="#menu">
+                  Menu
+                </a></p>
+            </div>
+          </div>
+          <div class="col-3 align-self-end">
+            <div id="glow" class="glow ">
+              <p><a href="#section2">
+                  Contact
+                </a></p>
+            </div>
+          </div>
+          <div class="d-inline-block align-text-top">
+            <div id="cartNav">
+              <div id="circle">0</div>
+              <a href="#cart"><img id="cartIcon" src="./img/cart_Icon.png" alt=""></a>
+            </div>
           </div>
         </div>
       </nav>
@@ -257,7 +264,7 @@
       <div class="col-md-12 col-lg-6">
         <div class="destacado">
           <div class="avery">
-            <div id="overlay"><img src="./img/pngwing.com copy2.png"></div>
+            <div id="overlay"><img src="./img/pngwing.com copy3 (1).png"></div>
           </div>
           <div class="credit">
             Edward Schmidt
@@ -298,25 +305,6 @@
             Total:<span id="totalPrice">0 $</span>
           </div>
           <button id="checkCart" class="AddToCart custom-btn btn-6">Buy</button>
-        </div>
-      </div>
-      <!-- Flexbox container for aligning the toasts -->
-      <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center"
-        style="min-height: 200px;">
-
-        <!-- Then put toasts within -->
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="toast-header">
-            <img src="./img/logo.png" class="rounded mr-2" alt="...">
-            <strong class="mr-auto">Bootstrap</strong>
-            <small>11 mins ago</small>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="toast-body">
-            Hello, world! This is a toast message.
-          </div>
         </div>
       </div>
       <!-- contact form -->
